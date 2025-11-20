@@ -8,13 +8,14 @@
 
 This one simply is teaching us to use exiftool.
 
-![Screenshot 2025-11-21 015214](Screenshot%2025-11-21%015214.png)
+![Screenshot 2025-11-21 015214](screenshot)
 
 As you can see we already got the base64. Throw inside cyberchef and thats it.
 
 
 
 > Flag: picoCTF{puzzl3d_m3tadata_f0und!_c8f91d68}
+
 
 
 
