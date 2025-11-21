@@ -20,7 +20,7 @@ This challenge is.. not interesting because it requires patience I dont have muc
 
 
 
-![Screenshot 2025-11-21 164200.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Easy\Phantom\Screenshot%202025-11-21%20164200.png)
+![Screenshot 2025-11-21 164200.png](Screenshot%202025-11-21%20164200.png)
 
 I discovered that there are multiple packets that ends with base64 so i think thats the flag but encoded with base64.. so I tried to extract all of them using this script:
 
@@ -87,5 +87,6 @@ Then I manually decode these base64 and rearrange the parts to get the flag!
 
 
 > Flag: picoCTF{1t_w4snt_th4t_34sy_tbh_4r_966d0bfb}
+
 
 
