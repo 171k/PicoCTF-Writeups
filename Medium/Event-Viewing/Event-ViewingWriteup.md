@@ -32,11 +32,11 @@ The hints give away a big clue to help us analyze the event logs. So we simply h
 
 The first flag suggested that user installed the software using an installer so I scrolled through the cheatsheet and found this:
 
-![Screenshot 2025-11-21 202707.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Medium\Event-Viewing\Screenshot%202025-11-21%20202707.png)
+![Screenshot 2025-11-21 202707.png](Screenshot%202025-11-21%20202707.png)
 
 For new MSI (Windows Installer) file download, there are 2 event id we can try to browse which is 1022 and 1033. So I tried both and found the first flag in 1033!
 
-![Screenshot 2025-11-21 202941.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Medium\Event-Viewing\Screenshot%202025-11-21%20202941.png)
+![Screenshot 2025-11-21 202941.png](Screenshot%202025-11-21%20202941.png)
 
 Flag was hidden in base64. Decode this and get the first part: "picoCTF{Ev3nt_vi3wv3r_"
 
@@ -58,11 +58,11 @@ Considering that this program have made its victim's computer to always shutdown
 
 
 
-![Screenshot 2025-11-21 204933.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Medium\Event-Viewing\Screenshot%202025-11-21%20204933.png)
+![Screenshot 2025-11-21 204933.png](Screenshot%202025-11-21%20204933.png)
 
 So I searched for "registry" and found this. 4657 could be the numbers we are looking for!
 
-![Screenshot 2025-11-21 205103.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Medium\Event-Viewing\Screenshot%202025-11-21%20205103.png)
+![Screenshot 2025-11-21 205103.png](Screenshot%202025-11-21%20205103.png)
 
 Aha! so we found the 2nd flag here! The object value name literally is "immediate shutdown" which shows that the registry edit indeed change the computer behaviour to always shutdown on startup. Decode this base64 and get the 2nd flag: "1s_a_pr3tty_us3ful_".
 
@@ -72,11 +72,11 @@ Aha! so we found the 2nd flag here! The object value name literally is "immediat
 
 Now, since the registry key has been edited to always shutdown on startup. Lets take a look at the cheatsheet againnnn.
 
-![Screenshot 2025-11-21 205607.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Medium\Event-Viewing\Screenshot%202025-11-21%20205607.png)
+![Screenshot 2025-11-21 205607.png](Screenshot%202025-11-21%20205607.png)
 
 Okay so we have multiple options here. We will be choosing 1074 because the computer will logs the event as the user shutting down the computer since the registry key executed the shutdown on startup.
 
-![Screenshot 2025-11-21 205757.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Medium\Event-Viewing\Screenshot%202025-11-21%20205757.png)
+![Screenshot 2025-11-21 205757.png](Screenshot%202025-11-21%20205757.png)
 
 and there we go, the final piece of our flag! Decode this from base64 again and get the flag: "t00l_81ba3fe9}"
 
@@ -85,6 +85,7 @@ and there we go, the final piece of our flag! Decode this from base64 again and 
 Combining all the flags and we will get:
 
 > flag: picoCTF{Ev3nt_vi3wv3r_1s_a_pr3tty_us3ful_t00l_81ba3fe9}
+
 
 
 
