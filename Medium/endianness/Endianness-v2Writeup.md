@@ -22,7 +22,7 @@ Interestingly, that looks like... `JFIF`! Supposedly a header for image files.
 
 Looking back at the question, the chall name is "Endianness" so I look up about endian ordering..
 
-<img title="" src="file:///C:/Users/Razlan/CTF/Pico/Forensic/Writeup/Medium/endianness/endiannote.png" alt="endiannote.png" width="405">
+<img title="" src="endiannote.png" alt="endiannote.png" width="405">
 
 Source: [Don't Let Endianness Flip You Around | Hackaday](https://hackaday.com/2020/08/04/dont-let-endianness-flip-you-around/)
 
@@ -97,10 +97,11 @@ python3 swap.py challengefile 4 #I use 4 because i want to swap 4 chunks
 
 and finally we got this image with flag:
 
-![challengefile.png](C:\Users\Razlan\CTF\Pico\Forensic\Writeup\Medium\endianness\challengefile.png)
+![challengefile.png](challengefile.png)
 
 
 
 Flag: `picoCTF{cert!f1Ed_iNd!4n_s0rrY_3nDian_6d3ad08e}`
+
 
 
